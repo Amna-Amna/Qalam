@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/teachermarkattendence.css">
+    <title>students of semester</title>
+</head>
+
+<body>
+
+    <div id="mid" class="color">
+        <img id="image" src="https://qalam.nust.edu.pk/odoocms_assets/static/img/logo.svg">
+        <h3 id="title" class="Title">National University of Sciences & Technology</h3>
+        <form action="/teacherlogin/teacherresults">
+            <button type="submit" id="backbtn">Back >> </button>
+        </form>
+    </div>
+
+    <div id="tablecontainer">
+        <div id="table" class="ex3">
+            <form action="<%= url %>/uploadresults" method="post">
+
+                <table>
+
+                    <tr>
+                        <th><b>CMS ID</b></th>
+                        <th><b>Name</b></th>
+                        <th><b>Discipline</b></th>
+                        <th><b>Semester</b></th>
+                        <th><b>Email</b></th>
+                        <th><b>Phone</b></th>
+                        <th><b>Assignments</b></th>
+                        <th><b>Quizzes</b></th>
+                        <th><b>Final</b></th>
+                    </tr>
+                    <% for (var i=0; i < result.length && result[0].cmsid; i++ ) { %>
+
+                        <tr>
+                            <td>
+                                <%= result[i].cmsid %>
+                            </td>
+                            <td>
+                                <%= result[i].name %>
+                            </td>
+                            <td>
+                                <%= result[i].dis_name %>
+                            </td>
+                            <td>
+                                <%= result[i].semester %>
+                            </td>
+                            <td>
+                                <%= result[i].email %>
+                            </td>
+                            <td>
+                                <%= result[i].phone %>
+                            <td>
+                                <input type="number" name="<%= result[i].cmsid %>">
+                            </td>
+                            <td>
+                                <input type="number" name="<%= result[i].cmsid %>">
+                            </td>
+                            <td>
+                                <input type="number" name="<%= result[i].cmsid %>">
+                            </td>
+                        </tr>
+
+                    <% } %>
+
+                </table>
+                <button style="margin-top: auto;" type="submit" class="course">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

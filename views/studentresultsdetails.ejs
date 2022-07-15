@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/studentresultsdetails.css">
+  <title>Marks</title>
+</head>
+
+<body>
+
+
+  <div id="mid" class="color">
+    <img id="image" src="https://qalam.nust.edu.pk/odoocms_assets/static/img/logo.svg">
+    <h3 id="title" class="Title">National University of Sciences & Technology</h3>
+    <button id="backbtn" onclick="history.back()">Back >> </button>
+  </div>
+  <div id="tablecontainer">
+    <div id="table">
+      <table>
+        <tr>
+          <th>Course Title: <%= result[0].coursename %>
+          </th>
+          <th>Assignments</th>
+          <th>Quizes</th>
+          <th>Finals</th>
+        </tr>
+        <tr>
+          <td><b>Total Marks</b></td>
+          <td>
+            <%= result[0].tmassignments %>
+          </td>
+          <td>
+            <%= result[0].tmquizes %>
+          </td>
+          <td>
+            <%= result[0].tmfinals %>
+          </td>
+        </tr>
+        <tr>
+          <td><b>Obtained Marks</b></td>
+          <td>
+            <%= result[0].omassignments %>
+          </td>
+          <td>
+            <%= result[0].omquizes %>
+          </td>
+          <td>
+            <%= result[0].omfinals %>
+          </td>
+        </tr>
+        <tr>
+          <td><b>Class Average</b></td>
+          <td>
+            <%= result1[0].avg_assignment %>
+          </td>
+          <td>
+            <%= result1[0].avg_quiz %>
+          </td>
+          <td>
+            <%= result1[0].avg_final %>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

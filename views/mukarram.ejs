@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/adminstudentsdetails.css">
+    <title>students of semester</title>
+</head>
+
+<body>
+
+    <div id="mid" class="color">
+        <img id="image" src="https://qalam.nust.edu.pk/odoocms_assets/static/img/logo.svg">
+        <h3 id="title" class="Title">National University of Sciences & Technology</h3>
+        <form action="/adminsemesters" method="post">
+            <input type="text" style="display: none;" value="<%= coursename %>" name="sub1">
+            <button type="submit" id="backbtn">Back >> </button>
+        </form>
+    </div>
+
+    <div id="tablecontainer">
+        <div id="table" class="ex3">
+            <table>
+
+                <tr <% if (course> -1) { %>style="display: default;"<%} else { %>style="display: none;"<% } %>>
+                            <th><b>CMS ID</b></th>
+                            <th><b>Name</b></th>
+                            <th><b>Discipline</b></th>
+                            <th><b>Semester</b></th>
+                            <th><b>Email</b></th>
+                            <th><b>Password</b></th>
+                            <th><b>Gender</b></th>
+                            <th><b>Date of birth</b></th>
+                            <th><b>Age</b></th>
+                            <th><b>Phone</b></th>
+                            <th><b>Address</b></th>
+                            <th><b>Courses</b></th>
+                            <th><b>Remove</b></th>
+                </tr>
+
+                <tr <% if (course> 0) { %>style="display: default;"<%} else { %>style="display: none;"<% } %>>
+                            <td>
+                                <% if (locals.arr[0].coursename.cmsid !=null) { %>
+                                    <%= arr[0].coursename.cmsid %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[0].coursename.name !=null) { %>
+                                    <%= arr[0].coursename.name %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[0].coursename.name !=null) { %>
+                                    <%= coursename %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[0].coursename.name !=null) { %>
+                                    <%= arr[0].coursename.semester %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[0].coursename.name !=null) { %>
+                                    <%= arr[0].coursename.email %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[0].coursename.name !=null) { %>
+                                    <%= arr[0].coursename.password %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[0].coursename.name !=null) { %>
+                                    <%= arr[0].coursename.gender %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[0].coursename.name !=null) { %>
+                                    <%= arr[0].coursename.date %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[0].coursename.name !=null) { %>
+                                    <%= arr[0].coursename.age %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[0].coursename.name !=null) { %>
+                                    <%= arr[0].coursename.phone %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[0].coursename.name !=null) { %>
+                                    <%= arr[0].coursename.address %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <form action="/admincoursesdetails" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[0].coursename!= null) { %><%= arr[0].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button type="submit" class="course">Courses</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form action="/adminremovestudent" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[0].coursename!= null) { %><%= arr[0].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button class="course">Remove</button>
+                                </form>
+                            </td>
+                </tr>
+
+                <tr <% if (course> 1) { %>style="display: default;"<%} else { %>style="display: none;"<% } %>>
+                            <td>
+                                <% if (locals.arr[1].coursename.cmsid !=null) { %>
+                                    <%= arr[1].coursename.cmsid %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[1].coursename.name !=null) { %>
+                                    <%= arr[1].coursename.name %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[1].coursename.name !=null) { %>
+                                    <%= coursename %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[1].coursename.name !=null) { %>
+                                    <%= arr[1].coursename.semester %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[1].coursename.name !=null) { %>
+                                    <%= arr[1].coursename.email %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[1].coursename.name !=null) { %>
+                                    <%= arr[1].coursename.password %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[1].coursename.name !=null) { %>
+                                    <%= arr[1].coursename.gender %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[1].coursename.name !=null) { %>
+                                    <%= arr[1].coursename.date %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[1].coursename.name !=null) { %>
+                                    <%= arr[1].coursename.age %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[1].coursename.name !=null) { %>
+                                    <%= arr[1].coursename.phone %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[1].coursename.name !=null) { %>
+                                    <%= arr[1].coursename.address %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <form action="/admincoursesdetails" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[1].coursename!= null) { %><%= arr[1].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button type="submit" class="course">Courses</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form action="/adminremovestudent" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[1].coursename!= null) { %><%= arr[1].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button class="course">Remove</button>
+                                </form>
+                            </td>
+                </tr>
+
+                <tr <% if (course> 2) { %>style="display: default;"<%} else { %>style="display: none;"<% } %>>
+                            <td>
+                                <% if (locals.arr[2].coursename.cmsid !=null) { %>
+                                    <%= arr[2].coursename.cmsid %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[2].coursename.name !=null) { %>
+                                    <%= arr[2].coursename.name %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[2].coursename.name !=null) { %>
+                                    <%= coursename %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[2].coursename.name !=null) { %>
+                                    <%= arr[2].coursename.semester %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[2].coursename.name !=null) { %>
+                                    <%= arr[2].coursename.email %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[2].coursename.name !=null) { %>
+                                    <%= arr[2].coursename.password %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[2].coursename.name !=null) { %>
+                                    <%= arr[2].coursename.gender %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[2].coursename.name !=null) { %>
+                                    <%= arr[2].coursename.date %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[2].coursename.name !=null) { %>
+                                    <%= arr[2].coursename.age %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[2].coursename.name !=null) { %>
+                                    <%= arr[2].coursename.phone %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[2].coursename.name !=null) { %>
+                                    <%= arr[2].coursename.address %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <form action="/admincoursesdetails" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[2].coursename!= null) { %><%= arr[2].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button type="submit" class="course">Courses</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form action="/adminremovestudent" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[2].coursename!= null) { %><%= arr[2].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button class="course">Remove</button>
+                                </form>
+                            </td>
+                </tr>
+
+                <tr <% if (course> 3) { %>style="display: default;"<%} else { %>style="display: none;"<% } %>>
+                            <td>
+                                <% if (locals.arr[3].coursename.cmsid !=null) { %>
+                                    <%= arr[3].coursename.cmsid %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[3].coursename.name !=null) { %>
+                                    <%= arr[3].coursename.name %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[3].coursename.name !=null) { %>
+                                    <%= coursename %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[3].coursename.name !=null) { %>
+                                    <%= arr[3].coursename.semester %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[3].coursename.name !=null) { %>
+                                    <%= arr[3].coursename.email %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[3].coursename.name !=null) { %>
+                                    <%= arr[3].coursename.password %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[3].coursename.name !=null) { %>
+                                    <%= arr[3].coursename.gender %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[3].coursename.name !=null) { %>
+                                    <%= arr[3].coursename.date %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[3].coursename.name !=null) { %>
+                                    <%= arr[3].coursename.age %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[3].coursename.name !=null) { %>
+                                    <%= arr[3].coursename.phone %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[3].coursename.name !=null) { %>
+                                    <%= arr[3].coursename.address %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <form action="/admincoursesdetails" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[3].coursename!= null) { %><%= arr[3].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button type="submit" class="course">Courses</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form action="/adminremovestudent" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[3].coursename!= null) { %><%= arr[3].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button class="course">Remove</button>
+                                </form>
+                            </td>
+                </tr>
+
+                <tr <% if (course> 4) { %>style="display: default;"<%} else { %>style="display: none;"<% } %>>
+                            <td>
+                                <% if (locals.arr[4].coursename.cmsid !=null) { %>
+                                    <%= arr[4].coursename.cmsid %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[4].coursename.name !=null) { %>
+                                    <%= arr[4].coursename.name %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[4].coursename.name !=null) { %>
+                                    <%= coursename %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[4].coursename.name !=null) { %>
+                                    <%= arr[4].coursename.semester %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[4].coursename.name !=null) { %>
+                                    <%= arr[4].coursename.email %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[4].coursename.name !=null) { %>
+                                    <%= arr[4].coursename.password %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[4].coursename.name !=null) { %>
+                                    <%= arr[4].coursename.gender %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[4].coursename.name !=null) { %>
+                                    <%= arr[4].coursename.date %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[4].coursename.name !=null) { %>
+                                    <%= arr[4].coursename.age %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[4].coursename.name !=null) { %>
+                                    <%= arr[4].coursename.phone %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[4].coursename.name !=null) { %>
+                                    <%= arr[4].coursename.address %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <form action="/admincoursesdetails" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[4].coursename!= null) { %><%= arr[4].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button type="submit" class="course">Courses</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form action="/adminremovestudent" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[4].coursename!= null) { %><%= arr[4].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button class="course">Remove</button>
+                                </form>
+                            </td>
+                </tr>
+
+                <tr <% if (course> 5) { %>style="display: default;"<%} else { %>style="display: none;"<% } %>>
+                            <td>
+                                <% if (locals.arr[5].coursename.cmsid !=null) { %>
+                                    <%= arr[5].coursename.cmsid %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[5].coursename.name !=null) { %>
+                                    <%= arr[5].coursename.name %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[5].coursename.name !=null) { %>
+                                    <%= coursename %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[5].coursename.name !=null) { %>
+                                    <%= arr[5].coursename.semester %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[5].coursename.name !=null) { %>
+                                    <%= arr[5].coursename.email %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[5].coursename.name !=null) { %>
+                                    <%= arr[5].coursename.password %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[5].coursename.name !=null) { %>
+                                    <%= arr[5].coursename.gender %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[5].coursename.name !=null) { %>
+                                    <%= arr[5].coursename.date %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[5].coursename.name !=null) { %>
+                                    <%= arr[5].coursename.age %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[5].coursename.name !=null) { %>
+                                    <%= arr[5].coursename.phone %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[5].coursename.name !=null) { %>
+                                    <%= arr[5].coursename.address %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <form action="/admincoursesdetails" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[5].coursename!= null) { %><%= arr[5].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button type="submit" class="course">Courses</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form action="/adminremovestudent" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[5].coursename!= null) { %><%= arr[5].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button class="course">Remove</button>
+                                </form>
+                            </td>
+                </tr>
+
+                <tr <% if (course> 6) { %>style="display: default;"<%} else { %>style="display: none;"<% } %>>
+                            <td>
+                                <% if (locals.arr[6].coursename.cmsid !=null) { %>
+                                    <%= arr[6].coursename.cmsid %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[6].coursename.name !=null) { %>
+                                    <%= arr[6].coursename.name %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[6].coursename.name !=null) { %>
+                                    <%= coursename %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[6].coursename.name !=null) { %>
+                                    <%= arr[6].coursename.semester %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[6].coursename.name !=null) { %>
+                                    <%= arr[6].coursename.email %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[6].coursename.name !=null) { %>
+                                    <%= arr[6].coursename.password %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[6].coursename.name !=null) { %>
+                                    <%= arr[6].coursename.gender %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[6].coursename.name !=null) { %>
+                                    <%= arr[6].coursename.date %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[6].coursename.name !=null) { %>
+                                    <%= arr[6].coursename.age %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[6].coursename.name !=null) { %>
+                                    <%= arr[6].coursename.phone %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[6].coursename.name !=null) { %>
+                                    <%= arr[6].coursename.address %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <form action="/admincoursesdetails" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[6].coursename!= null) { %><%= arr[6].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button type="submit" class="course">Courses</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form action="/adminremovestudent" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[6].coursename!= null) { %><%= arr[6].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button class="course">Remove</button>
+                                </form>
+                            </td>
+                </tr>
+
+                <tr <% if (course> 7) { %>style="display: default;"<%} else { %>style="display: none;"<% } %>>
+                            <td>
+                                <% if (locals.arr[7].coursename.cmsid !=null) { %>
+                                    <%= arr[7].coursename.cmsid %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[7].coursename.name !=null) { %>
+                                    <%= arr[7].coursename.name %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[7].coursename.name !=null) { %>
+                                    <%= coursename %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[7].coursename.name !=null) { %>
+                                    <%= arr[7].coursename.semester %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[7].coursename.name !=null) { %>
+                                    <%= arr[7].coursename.email %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[7].coursename.name !=null) { %>
+                                    <%= arr[7].coursename.password %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[7].coursename.name !=null) { %>
+                                    <%= arr[7].coursename.gender %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[7].coursename.name !=null) { %>
+                                    <%= arr[7].coursename.date %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[7].coursename.name !=null) { %>
+                                    <%= arr[7].coursename.age %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[7].coursename.name !=null) { %>
+                                    <%= arr[7].coursename.phone %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[7].coursename.name !=null) { %>
+                                    <%= arr[7].coursename.address %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <form action="/admincoursesdetails" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[7].coursename!= null) { %><%= arr[7].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button type="submit" class="course">Courses</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form action="/adminremovestudent" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[7].coursename!= null) { %><%= arr[7].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button class="course">Remove</button>
+                                </form>
+                            </td>
+                </tr>
+
+                <tr <% if (course> 8) { %>style="display: default;"<%} else { %>style="display: none;"<% } %>>
+                            <td>
+                                <% if (locals.arr[8].coursename.cmsid !=null) { %>
+                                    <%= arr[8].coursename.cmsid %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[8].coursename.name !=null) { %>
+                                    <%= arr[8].coursename.name %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[8].coursename.name !=null) { %>
+                                    <%= coursename %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[8].coursename.name !=null) { %>
+                                    <%= arr[8].coursename.semester %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[8].coursename.name !=null) { %>
+                                    <%= arr[8].coursename.email %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[8].coursename.name !=null) { %>
+                                    <%= arr[8].coursename.password %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[8].coursename.name !=null) { %>
+                                    <%= arr[8].coursename.gender %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[8].coursename.name !=null) { %>
+                                    <%= arr[8].coursename.date %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[8].coursename.name !=null) { %>
+                                    <%= arr[8].coursename.age %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[8].coursename.name !=null) { %>
+                                    <%= arr[8].coursename.phone %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[8].coursename.name !=null) { %>
+                                    <%= arr[8].coursename.address %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <form action="/admincoursesdetails" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[8].coursename!= null) { %><%= arr[8].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button type="submit" class="course">Courses</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form action="/adminremovestudent" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[8].coursename!= null) { %><%= arr[8].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button class="course">Remove</button>
+                                </form>
+                            </td>
+                </tr>
+
+                <tr <% if (course> 9) { %>style="display: default;"<%} else { %>style="display: none;"<% } %>>
+                            <td>
+                                <% if (locals.arr[9].coursename.cmsid !=null) { %>
+                                    <%= arr[9].coursename.cmsid %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[9].coursename.name !=null) { %>
+                                    <%= arr[9].coursename.name %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[9].coursename.name !=null) { %>
+                                    <%= coursename %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[9].coursename.name !=null) { %>
+                                    <%= arr[9].coursename.semester %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[9].coursename.name !=null) { %>
+                                    <%= arr[9].coursename.email %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[9].coursename.name !=null) { %>
+                                    <%= arr[9].coursename.password %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[9].coursename.name !=null) { %>
+                                    <%= arr[9].coursename.gender %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[9].coursename.name !=null) { %>
+                                    <%= arr[9].coursename.date %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[9].coursename.name !=null) { %>
+                                    <%= arr[9].coursename.age %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[9].coursename.name !=null) { %>
+                                    <%= arr[9].coursename.phone %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[9].coursename.name !=null) { %>
+                                    <%= arr[9].coursename.address %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <form action="/admincoursesdetails" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[9].coursename!= null) { %><%= arr[9].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button type="submit" class="course">Courses</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form action="/adminremovestudent" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[9].coursename!= null) { %><%= arr[9].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button class="course">Remove</button>
+                                </form>
+                            </td>
+                </tr>
+
+                <tr <% if (course> 10) { %>style="display: default;"<%} else { %>style="display: none;"<% } %>>
+                            <td>
+                                <% if (locals.arr[10].coursename.cmsid !=null) { %>
+                                    <%= arr[10].coursename.cmsid %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[10].coursename.name !=null) { %>
+                                    <%= arr[10].coursename.name %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[10].coursename.name !=null) { %>
+                                    <%= coursename %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[10].coursename.name !=null) { %>
+                                    <%= arr[10].coursename.semester %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[10].coursename.name !=null) { %>
+                                    <%= arr[10].coursename.email %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[10].coursename.name !=null) { %>
+                                    <%= arr[10].coursename.password %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[10].coursename.name !=null) { %>
+                                    <%= arr[10].coursename.gender %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[10].coursename.name !=null) { %>
+                                    <%= arr[10].coursename.date %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[10].coursename.name !=null) { %>
+                                    <%= arr[10].coursename.age %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[10].coursename.name !=null) { %>
+                                    <%= arr[10].coursename.phone %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <% if (locals.arr[10].coursename.name !=null) { %>
+                                    <%= arr[10].coursename.address %>
+                                        <%} else { %>
+                                            <% }%>
+                            </td>
+                            <td>
+                                <form action="/admincoursesdetails" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[10].coursename!= null) { %><%= arr[10].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button type="submit" class="course">Courses</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form action="/adminremovestudent" method="post">
+                                    <input style="display: none;" type="text" ,
+                                        value="<% if (locals.arr[10].coursename!= null) { %><%= arr[10].coursename.cmsid %><%} else { %><% }%>"
+                                        name="cmsid">
+                                    <button class="course">Remove</button>
+                                </form>
+                            </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

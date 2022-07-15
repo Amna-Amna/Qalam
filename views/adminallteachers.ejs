@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/adminstudentsdetails.css">
+    <title>students of semester</title>
+</head>
+
+<body>
+
+    <div id="mid" class="color">
+        <img id="image" src="https://qalam.nust.edu.pk/odoocms_assets/static/img/logo.svg">
+        <h3 id="title" class="Title">National University of Sciences & Technology</h3>
+        <!-- <form action="/adminlogin" method="POST"> -->
+        <button id="backbtn" onclick="history.back()">Back >> </button>
+        <!-- </form> -->
+    </div>
+
+    <div id="tablecontainer">
+        <div id="table" class="ex3">
+            <table>
+
+                <tr>
+                    <th><b>Teacher ID</b></th>
+                    <th><b>Name</b></th>
+                    <th><b>Email</b></th>
+                    <th><b>Password</b></th>
+                    <!-- <th><b>Course Name</b></th>
+                    <th><b>Course ID</b></th> -->
+                    <th><b>Gender</b></th>
+                    <th><b>Date of birth</b></th>
+                    <th><b>Age</b></th>
+                    <th><b>Phone</b></th>
+                    <th><b>Address</b></th>
+                    <th><b>Courses</b></th>
+                    <th><b>Remove</b></th>
+                </tr>
+
+                <% for (var i=0; i < teacher.length; i++ ) { %>
+
+                    <tr>
+                        <td>
+                            <%= teacher[i].teacherid %>
+                        </td>
+                        <td>
+                            <%= teacher[i].name %>
+                        </td>
+                        <td>
+                            <%= teacher[i].email %>
+                        </td>
+                        <td>
+                            <%= teacher[i].password %>
+                        </td>
+                        <td>
+                            <%= teacher[i].gender %>
+                                </t>
+                        <td>
+                            <%= teacher[i].date %>
+                        </td>
+                        <td>
+                            <%= teacher[i].age %>
+                        </td>
+                        <td>
+                            <%= teacher[i].phone %>
+                        </td>
+                        <td>
+                            <%= teacher[i].address %>
+                        </td>
+                        <td>
+                            <form action="/adminteachercourses" method="post">
+                                <input style="display: none;" type="text" , value="<%= teacher[i].teacherid %>"
+                                    name="teacherid">
+                                <button type="submit" class="course">Courses</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="/adminremoveteacher" method="post">
+                                <input style="display: none;" type="text" , value="<%= teacher[i].teacherid %>"
+                                    name="teacherid">
+                                <button class="course">Remove</button>
+                            </form>
+                        </td>
+                    </tr>
+
+                    <% } %>
+
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

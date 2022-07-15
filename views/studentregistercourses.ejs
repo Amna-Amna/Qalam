@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/teachermarkattendence.css">
+    <title>students of semester</title>
+</head>
+
+<body>
+
+    <div id="mid" class="color">
+        <img id="image" src="https://qalam.nust.edu.pk/odoocms_assets/static/img/logo.svg">
+        <h3 id="title" class="Title">National University of Sciences & Technology</h3>
+        <form action="/studentlogin" method="post">
+            <button type="submit" id="backbtn">Back >> </button>
+        </form>
+    </div>
+
+    <div id="tablecontainer">
+        <div id="table" class="ex3">
+            <form action="/uploadattendence" method="post">
+
+                <table>
+
+                    <tr>
+                        <th><b>Course ID</b></th>
+                        <th><b>Course Name</b></th>
+                        <th><b>Credit hrs</b></th>
+                        <th><b>Register</b></th>
+                    </tr>
+                    <% for (var i=0; i < result.length; i++ ) { %>
+
+                        <tr>
+                            <td>
+                                <%= result[i].courseid %>
+                            </td>
+                            <td>
+                                <%= result[i].coursename %>
+                            </td>
+                            <td>
+                                credit hrs
+                            </td>
+                            <td>
+                                <label class="container">Select
+                                    <input type="checkbox" name="<%= result[i].courseid %>">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                        </tr>
+
+                    <% } %>
+
+                </table>
+                <button style="margin-top: auto;" type="submit" class="course">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

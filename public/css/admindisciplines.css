@@ -1,0 +1,120 @@
+body {
+    background-color: rgb(216, 215, 237);
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+#image {
+    width: 62px;
+    height: 63px;
+    float: left;
+    margin-left: 101px;
+}
+
+#title {
+    color: white;
+    margin: 5px;
+}
+
+#mid {
+    margin: auto;
+    height: 12vh;
+    width: 100vw;
+    text-align: left center;
+    display: flex;
+    align-items: center;
+}
+
+.color {
+    background: linear-gradient(to right, rgb(90, 135, 165), rgb(90, 135, 165), rgb(65, 105, 125));
+    border-bottom: 5px solid rgb(53, 92, 111);
+    padding: 5px;
+}
+
+#subjects {
+    width: 20vw;
+    height: 55vh;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    z-index: 100;
+    border-top-right-radius: 5px;
+    box-shadow: 10px 10px 10px 10px rgb(206, 205, 227);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    overflow: scroll;
+    padding-top: 5px;
+}
+
+#SN {
+    width: 18.5vw;
+    height: 8vh;
+    /* background-color: #4CAF50;  */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin: 5px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#SN:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(90, 135, 165);
+}
+
+#SN {
+    background-color: rgb(90, 135, 165);
+    color: white;
+    border: 2px solid rgb(90, 135, 165);
+}
+
+#results {
+    margin: 1cm;
+}
+
+#backbtn {
+    width: 160px;
+    height: 50px;
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-top: -24px;
+}
+
+#backbtn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(90, 135, 165);
+}
+
+#backbtn {
+    background-color: rgb(90, 135, 165);
+    color: white;
+    border: 2px solid white;
+    border-radius: 10%;
+    right: 0;
+    position: absolute;
+    margin-right: 15px;
+}

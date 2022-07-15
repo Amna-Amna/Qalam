@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/studentprofile.css">
+    <title>new profile</title>
+</head>
+
+<body>
+
+    <div id="mid" class="color">
+        <img id="image" src="https://qalam.nust.edu.pk/odoocms_assets/static/img/logo.svg">
+        <h3 id="title" class="Title">National University of Sciences & Technology</h3>
+        <button id="backbtn" onclick="history.back()">Back >> </button>
+    </div>
+
+    <div id="div">
+        <p>
+        <h1> Profile</h1>
+        </p>
+        <p>Name: <%= result[0].name %>
+        </p>
+        <p>ID: <%= result[0].teacherid %>
+        </p>
+        <p>E-mail: <%= result[0].email %>
+        </p>
+        <p>Password: <%= result[0].password %>
+        </p>
+        <p>Gender: <%= result[0].gender %>
+        </p>
+        <p>Date of birth: <%= result[0].dateofbirth %>
+        </p>
+        <p>Age: <%= result[0].age %>
+        </p>
+        <p>Phone: <%= result[0].phone %>
+        </p>
+        <p>Address: <%= result[0].address %>
+        </p>
+    </div>
+
+</body>
+
+</html>

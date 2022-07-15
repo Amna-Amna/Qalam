@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/adminindex.css">
+    <title>ADMIN HOME</title>
+
+</head>
+
+<body>
+
+    <div id="mid" class="color">
+        <button onclick="Hfunction()" id="btn">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+
+        <img id="image" src="https://qalam.nust.edu.pk/odoocms_assets/static/img/logo.svg">
+        <h3 id="title" class="Title">National University of Sciences & Technology</h3>
+
+        <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+            <input id="searchbar" type="text" placeholder="Search.." name="search2">
+            <button id="searchbtn" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+
+    </div>
+
+    <div id="container">
+
+        <div id="bar">
+            <form action="<%= url %>/adminregisterstudent" method="get">
+                <button class="btn" type="submit">
+                    <h3>Register new student</h3>
+                </button>
+            </form>
+
+            <form action="<%= url %>/admindisciplines" method="get">
+                <button class="btn" type="submit">
+                    <h3>Students and Disciplines</h3>
+                </button>
+            </form>
+
+            <form action="<%= url %>/adminregisterteacher" method="get">
+                <button class="btn" type="submit">
+                    <h3>Register new teacher</h3>
+                </button>
+            </form>
+
+            <form action="<%= url %>/adminregistercourses" method="get">
+                <button class="btn" type="submit">
+                    <h3>Register courses</h3>
+                </button>
+            </form>
+
+            <form action="<%= url %>/adminallteachers" method="get">
+                <button class="btn" type="submit">
+                    <h3>All teachers</h3>
+                </button>
+            </form>
+
+            <!-- <a href="disciplines.html" target ="_blank"id="request">Discipline</a> -->
+
+            <form action="/adminlogout" method="POST">
+                <button type="submit" class="button button2">Log Out</button>
+            </form>
+        </div>
+
+        <!-- <div id="pic">
+        </div> -->
+
+        <div id="box">
+
+        </div>
+
+    </div>
+
+    <script src="/js/registration.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+body {
+    background-color: rgb(216, 215, 237);
+    margin: 0%;
+    padding: 0%;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+#image {
+    width: 62px;
+    height: 63px;
+    float: left;
+    margin-left: 50px;
+}
+
+#title {
+    color: white;
+    margin: 5px;
+}
+
+#mid {
+    margin: 0%;
+    height: 12vh;
+    width: 100vw;
+    text-align: left center;
+    display: flex;
+    align-items: center;
+}
+
+.color {
+    background: linear-gradient(to right, rgb(90, 135, 165), rgb(90, 135, 165), rgb(65, 105, 125));
+    border-bottom: 5px solid rgb(53, 92, 111);
+    padding: 5px;
+}
+
+div {
+    transition-duration: 1s;
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+#btn {
+    background-color: rgb(90, 135, 165);
+    border: 0;
+    margin: 0;
+}
+
+.btn {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    text-align: left;
+    padding-left: 5px;
+}
+
+#bar {
+    transition-duration: 0.5s;
+    background-color: white;
+    height: 100vh;
+    width: 0%;
+    z-index: 1;
+    overflow: hidden;
+    margin: 0%;
+    box-shadow: 10px 10px 10px 10px rgb(206, 205, 227);
+}
+
+#enrol {
+    background-color: white;
+    color: black;
+    height: 3vh;
+    width: 12vw;
+    float: left;
+    display: block;
+    margin: 0.2cm;
+}
+
+#feedback {
+    background-color: white;
+    color: black;
+    height: 3vh;
+    width: 12vw;
+    float: left;
+    display: block;
+    margin: 0.2cm;
+}
+
+#request {
+    background-color: white;
+    color: black;
+    height: 3vh;
+    width: 12vw;
+    float: left;
+    display: block;
+    margin: 0.2cm;
+}
+
+#box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 62.5vw;
+    height: 53vh;
+    background-color: white;
+    margin: 0;
+    position: fixed;
+    margin-left: 18.5vw;
+    border-radius: 5px;
+    z-index: 100;
+    border-top-right-radius: 5px;
+    box-shadow: 10px 10px 10px 10px rgb(206, 205, 227);
+}
+
+#container {
+    display: grid;
+    grid-template-columns: auto auto;
+    /* margin: 0; */
+    width: auto;
+    height: auto;
+    background-color: rgb(216, 215, 237);
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
+.button2:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid rgb(90, 135, 165);
+}
+
+.button2 {
+    background-color: rgb(90, 135, 165);
+    color: white;
+    border: 2px solid rgb(90, 135, 165);
+    width: 100%;
+    margin: 0%;
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid rgb(90, 135, 165);
+    float: left;
+    width: 80%;
+    background: white;
+    box-sizing: border-box;
+}
+
+form.example #searchbtn {
+    float: left;
+    width: 20%;
+    height: 40px;
+    background: rgb(90, 135, 165);
+    color: white;
+    font-size: 20px;
+    border: 1px solid rgb(90, 135, 165);
+    border: none;
+    border-left: none;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+form.example #searchbtn:hover {
+    /* background: #0b7dda; */
+    color: rgb(90, 135, 165);
+    background-color: white;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}

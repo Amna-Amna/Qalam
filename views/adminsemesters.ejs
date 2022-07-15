@@ -1,0 +1,84 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/admindisciplines.css">
+    <title>Discipline</title>
+</head>
+<body>
+    
+    <div id="mid" class="color">
+        <img id="image" src="https://qalam.nust.edu.pk/odoocms_assets/static/img/logo.svg">   
+        <h3 id="title" class="Title">National University of Sciences & Technology</h3>
+        <button id="backbtn">Back >></button>
+    </div>
+    <h1 id="results">DISCIPLINES</h1>
+    <div id="subjects">
+
+        <div id="SN">
+            <a href="semesters.html" target ="_blank">BS MATHEMATICS</a>
+        </div>
+        <div id="SN">
+            <a href="semesters.html" target ="_blank">BS PHYSICS</a>
+        </div>
+
+        <div id="SN">
+            <a href="semesters.html" target ="_blank">BS CHEMISTRY</a>
+        </div>
+        <div id="SN">
+            <a href="semesters.html" target ="_blank">BS COMPUTER SCIENCE</a>
+        </div>
+        <div id="SN">
+            <a href="semesters.html" target ="_blank">BS ELECTRICAL ENGINEERING</a></div>
+
+    </div>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/adminsemesters.css">
+    <title>Semesters</title>
+</head>
+
+<body>
+
+    <div id="mid" class="color">
+        <img id="image" src="https://qalam.nust.edu.pk/odoocms_assets/static/img/logo.svg">
+        <h3 id="title" class="Title">National University of Sciences & Technology</h3>
+        <!-- <form action="/admindisciplines" method="get"> -->
+        <button id="backbtn" onclick="history.back()">Back >> </button>
+        <!-- </form> -->
+    </div>
+    <h1 id="results">Semesters</h1>
+
+    <div id="subjects">
+
+        <% for (var i=1; i < 8; i++ ) { %>
+
+            <form action="<%= url %>/semester:<%= i %>/adminstudentsdetails" method="post">
+                <input style="display: none;" type="text" , value="<%= coursename %>" name="sub1">
+                <input style="display: none;" type="text" , value="<%= i %>" name="semester">
+                <button id="SN" type="submit">
+                    <h3>Semester <%= i %>
+                    </h3>
+                </button>
+            </form>
+
+            <% } %>
+
+    </div>
+
+</body>
+
+</html>

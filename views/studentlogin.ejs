@@ -1,0 +1,98 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/studentlogin.css">
+    <title>STUDENT PAGE</title>
+</head>
+<body>
+    
+    <div id="mid" class="color">
+        <img id="image" src="/img/nust_logo.png">   
+        <h3 id="title" class="Title">National University of Sciences & Technology</h3>
+        <a href="http://localhost:3000">Back</a>
+    </div>
+
+    <div class="center">
+        <h1 id="qalam">QALAM</h1>
+        <p>Campus Management Solution</p>
+        <h3>Login For Student</h3>
+        <%= errormessage %>
+        <form action="/studentlogin" method="POST">
+          <div>
+            <input type="email" id="size" name="email" placeholder="Email" required>
+          </div>
+          <br />
+          <div>
+            <input type="password" id="btn" name="password" placeholder="Password" required>
+          </div>
+          <br /><br />
+          <button id="login" type="submit">Login</button>
+        </form>
+    </div>  
+
+    <p id="text">Developed by <b><i><AMNA/i></b>, National University of Sciences & Technology,</p>
+    <p id="text1">H-12, Islamabad, Pakistan 2022© All right reserved.</p>
+
+  <script src="/js/backbtn.js"></script>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/studentlogin.css">
+  <title>STUDENT PAGE</title>
+</head>
+
+<body>
+
+  <div id="mid" class="color">
+    <img id="image" src="https://qalam.nust.edu.pk/odoocms_assets/static/img/logo.svg">
+    <h3 id="title" class="Title">National University of Sciences & Technology</h3>
+    <a href="http://localhost:3000"><button id="backbtn">Back >></button></a>
+  </div>
+
+  <div class="center">
+    <h1 id="qalam"><img src="https://qalam.nust.edu.pk/odoocms_assets/static/img/sys.svg" alt="Qalam"></h1>
+    <p>Campus Management Solution</p>
+    <h3>Login For Student</h3>
+
+    <div id="errormessage">
+      <p style="color: red;">
+        <%= errormessage %>
+      </p>
+    </div>
+
+    <form action="/studentlogin" method="POST">
+      <div>
+        <input type="email" id="size" name="email" placeholder="Email" required>
+      </div>
+      <br />
+      <div>
+        <input type="password" id="btn" name="password" placeholder="Password" required>
+      </div>
+      <br /><br />
+      <button id="login" type="submit">Login</button>
+    </form>
+
+  </div>
+
+  <p id="text">Developed by <b><i>AMNA</i></b>, National University of Sciences & Technology,</p>
+  <p id="text1">H-12, Islamabad, Pakistan 2022© All right reserved.</p>
+
+  <script src="/js/backbtn.js"></script>
+
+</body>
+
+</html>

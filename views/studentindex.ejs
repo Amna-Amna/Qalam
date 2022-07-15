@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/studentindex.css">
+    <title>QALAM DETAILS</title>
+</head>
+
+<body>
+    <div id="mid" class="color">
+        <button onclick="Hfunction()" id="btn">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+
+        <img id="image" src="https://qalam.nust.edu.pk/odoocms_assets/static/img/logo.svg">
+        <h3 id="title" class="Title">National University of Sciences & Technology</h3>
+    </div>
+
+    <div id="container">
+
+        <div id="bar">
+
+            <form action="<%= url %>/studentprofile" method="get">
+                <button class="btn" type="submit">
+                    <h3>Profile</h3>
+                </button>
+            </form>
+
+            <form action="<%= url %>/studentattendence" method="get">
+                <button class="btn" type="submit">
+                    <h3>Attendence</h3>
+                </button>
+            </form>
+
+            <form action="<%= url %>/studentresults" method="get">
+                <button class="btn" type="submit">
+                    <h3>Results & Exams</h3>
+                </button>
+            </form>
+
+            <form action="<%= url %>/studentregistercourses" method="get">
+                <button class="btn" type="submit">
+                    <h3>Register Courses</h3>
+                </button>
+            </form>
+
+            <form action="/logout" method="POST">
+                <button type="submit" class="button button2">Log Out</button>
+            </form>
+        </div>
+
+
+        <div id="box">
+
+            <form action="<%= url %>/studentprofileupload" method="get">
+                <button class="btn" type="submit"><img id="round" src=<%=profile %>></button>
+            </form>
+
+            <div id="profile2">
+
+                <p id="profile1">Name &nbsp;&nbsp;&nbsp;: <%= name %>
+                </p>
+                <p id="profile1">CMS ID : <%= cmsid %>
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/registration.js"></script>
+</body>
+
+</html>

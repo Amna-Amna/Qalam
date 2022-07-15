@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/adminstudentsdetails.css">
+    <title>students of semester</title>
+</head>
+
+<body>
+
+    <div id="mid" class="color">
+        <img id="image" src="https://qalam.nust.edu.pk/odoocms_assets/static/img/logo.svg">
+        <h3 id="title" class="Title">National University of Sciences & Technology</h3>
+        <button type="submit" id="backbtn" onclick="history.back()">Back >> </button>
+    </div>
+
+    <div id="tablecontainer">
+        <div id="table" class="ex3">
+            <table>
+
+                <tr>
+                    <th><b>CMS ID</b></th>
+                    <th><b>Name</b></th>
+                    <th><b>Discipline</b></th>
+                    <th><b>Semester</b></th>
+                    <th><b>Email</b></th>
+                    <th><b>Password</b></th>
+                    <th><b>Gender</b></th>
+                    <th><b>Date of birth</b></th>
+                    <th><b>Age</b></th>
+                    <th><b>Phone</b></th>
+                    <th><b>Address</b></th>
+                    <th><b>Courses</b></th>
+                    <th><b>Remove</b></th>
+                </tr>
+                <% for (var i=0; i < result.length && result[0].cmsid; i++ ) { %>
+
+                    <tr>
+                        <td>
+                            <%= result[i].cmsid %>
+                        </td>
+                        <td>
+                            <%= result[i].name %>
+                        </td>
+                        <td>
+                            <%= result[i].dis_name %>
+                        </td>
+                        <td>
+                            <%= result[i].semester %>
+                        </td>
+                        <td>
+                            <%= result[i].email %>
+                        </td>
+                        <td>
+                            <%= result[i].password %>
+                        </td>
+                        <td>
+                            <%= result[i].gender %>
+                                </t>
+                        <td>
+                            <%= result[i].date %>
+                        </td>
+                        <td>
+                            <%= result[i].age %>
+                        </td>
+                        <td>
+                            <%= result[i].phone %>
+                        </td>
+                        <td>
+                            <%= result[i].address %>
+                        </td>
+                        <td>
+                            <form action="<%= url %>/cmsid:<%= result[i].cmsid %>/admincoursesdetails" method="post">
+                                <input style="display: none;" type="text" , value="<%= result[i].cmsid %>" name="cmsid">
+                                <button type="submit" class="course">Courses</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="/adminremovestudent" method="post">
+                                <input name="semester" type="text" style="display: none;"
+                                    value="<%= result[0].semester %>">
+                                <input name="sub1" type="text" style="display: none;"
+                                    value="<%= result[0].discipline %>">
+                                <input style="display: none;" type="text" , value="<%= result[i].cmsid %>" name="cmsid">
+                                <button class="course">Remove</button>
+                            </form>
+                        </td>
+                    </tr>
+
+                    <% } %>
+
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

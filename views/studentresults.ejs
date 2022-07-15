@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/studentattendence.css">
+    <title>ATTENDENCE</title>
+</head>
+
+<body>
+
+    <div id="mid" class="color">
+        <img id="image" src="https://qalam.nust.edu.pk/odoocms_assets/static/img/logo.svg">
+        <h3 id="title" class="Title">National University of Sciences & Technology</h3>
+        <button id="backbtn" onclick="history.back()">Back >> </button>
+    </div>
+    <h1 id="results">Results</h1>
+
+    <div id="subjects">
+
+        <h3 <% if (result==null) { %>style="display: default; color: red"<%} else { %>style="display: none;"<% }%>>No
+                    courses registerd</h3>
+
+        <% for (var i=0; i < result.length; i++ ) { %>
+
+            <form action="/studentresultsdetails" method="post">
+                <input style="display: none;" type="text" , value="<%= result[i].coursename %>" name="sub1">
+                <button id="SN" type="submit">
+                    <h3>
+                        <%= result[i].coursename %>
+                    </h3>
+                </button>
+            </form>
+
+            <% } %>
+
+    </div>
+
+</body>
+
+</html>
